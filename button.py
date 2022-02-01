@@ -10,9 +10,7 @@ from load_image import load_image
 class Button:
     def __init__(self, x_pos: int, y_pos: int, text: str, font_params: FontParams,
                  color: Tuple[int, int, int], border: bool = True, visible: bool = True,
-                 custom_btn_size_name: str = None, background_image_name: str = None,
-                 *group) -> None:
-        super().__init__(*group)
+                 custom_btn_size_name: str = None, background_image_name: str = None) -> None:
         self.x_pos = x_pos
         self.y_pos = y_pos
         self.visible = visible

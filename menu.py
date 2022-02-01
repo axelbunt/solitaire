@@ -32,6 +32,11 @@ def switch_state_to_showing_tmp_text() -> None:
     back_btn.visible = True
 
 
+def switch_state_to_game_starting() -> None:
+    app_settings.game_state = 'game starting'
+    back_btn.visible = True
+
+
 def switch_state_to_showing_rules() -> None:
     app_settings.game_state = 'showing rules'
     back_btn.visible = True
@@ -70,7 +75,7 @@ def show_rules(screen: pg.Surface) -> None:
 
 
 def show_developer_info(screen: pg.Surface) -> None:
-    text_parts_to_draw = ['Разработчик: Axelbunt 54', 'Версия: v0.1']
+    text_parts_to_draw = ['Разработчики: Axelbunt 54, stival06', 'Версия: v0.5']
     for indent, text_part in enumerate(text_parts_to_draw, -1):
         draw_text(screen, text_part, 'menu_buttons_font', app_settings.window_width // 2,
                   app_settings.window_height // 2 + indent * app_settings.text_indent)
@@ -81,9 +86,9 @@ def exit_app():
     sys.exit()
 
 
-menu_buttons[0].onclick = switch_state_to_showing_tmp_text
+menu_buttons[0].onclick = switch_state_to_game_starting
 menu_buttons[1].onclick = switch_state_to_showing_rules
-menu_buttons[2].onclick = switch_state_to_showing_tmp_text
-menu_buttons[3].onclick = switch_state_to_showing_developer
-menu_buttons[4].onclick = exit_app
+# menu_buttons[2].onclick = switch_state_to_showing_tmp_text
+menu_buttons[2].onclick = switch_state_to_showing_developer
+menu_buttons[3].onclick = exit_app
 back_btn.onclick = switch_state_to_showing_menu

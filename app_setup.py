@@ -9,13 +9,13 @@ WINDOW_SIZE = WINDOW_WIDTH, WINDOW_HEIGHT = 1100, 750
 
 app_settings = AppSettings(game_title='Пасьянс "Косынка"',
                            game_state='showing menu',
-                           menu_buttons=('Играть', 'Правила', 'Статистика', 'О разработчике',
-                                         'Выход'),
-                           background_color=(0, 0, 0),
+                           menu_buttons=('Играть', 'Правила', 'О разработчиках',
+                                         'Выход'),  # todo: add 'Статистика'
+                           background_color=(34, 139, 34),
                            back_button_size=(130, 50),
                            menu_buttons_size=(300, 50),
                            menu_buttons_indent=70,
-                           menu_buttons_color=(100, 255, 100),
+                           menu_buttons_color=(255, 255, 255),
                            text_indent=40,
                            game_title_font=FontParams('Arial', 80),
                            menu_buttons_font=FontParams('Arial', 35),
