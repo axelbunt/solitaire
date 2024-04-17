@@ -3,7 +3,7 @@ import pygame as pg
 
 
 def load_image(name: str, color_key=None) -> pg.Surface:
-    filename = os.path.join('images', name)
+    filename = os.path.join('assets/cards_images', name)
     try:
         img = pg.image.load(filename).convert()
     except pg.error as message:
